@@ -15,7 +15,7 @@ class PortMateria(ABC):
     def create(self, materia: Materia) -> Any: pass
 
     @abstractmethod
-    def update(self, name: str, status: bool, career: str) -> Any: pass
+    def update(self, id: str, name: str, status: bool, career: str) -> Any: pass
 
     @abstractmethod
     def delete(self, id: str) -> Any: pass
