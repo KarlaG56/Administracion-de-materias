@@ -8,5 +8,5 @@ class Tema(Base):
     uuid = Column(String(36), primary_key=True)
     name = Column(String(255), nullable=False)
     status = Column(Boolean, nullable=False)
-    materia_id = Column(String(36), ForeignKey('materias.id'))
+    materia_id = Column(String(36), ForeignKey('materias.uuid'))
     materia = relationship(Materia, backref=backref('temas', uselist=True))
